@@ -1,3 +1,10 @@
+:root {
+  --navbar-bg-color: #d9eee1;
+  --navbar-text-color: #5e7062;
+}
+html {
+  overflow-y: hidden;
+}
 /* GENERAL */
 body {
   font-family: "Source Sans Pro";
@@ -6,7 +13,7 @@ body {
 
 a {
   text-decoration: none;
-  color: #5e7062;
+  color: var(--navbar-text-color);
 }
 
 a:hover {
@@ -14,7 +21,7 @@ a:hover {
 }
 
 a:active {
-  color: aqua;
+  color: grey;
 }
 
 .main {
@@ -33,7 +40,7 @@ nav {
   margin: 0;
   padding: 0;
   font-size: xx-large;
-  background-color: #d9eee1;
+  background-color: var(--navbar-bg-color);
   padding-right: 10px;
 }
 
@@ -50,18 +57,29 @@ nav li {
 }
 
 /* HOME */
-.profile-pic {
-}
-
 .home-content {
   width: 500px;
 }
 
-.desc-text {
-   border-style: solid;
-   background-color: gray; 
-    border-color: grey;
-  margin-top: 10px;
-  padding: 10px;
-  color: black;
+.home-content h1 {
+  color: var(--navbar-text-color);
 }
+
+.desc-text {
+  border-style: solid;
+  background-color: var(--navbar-bg-color); 
+  border-color: var(--navbar-bg-color);
+  border-radius: 20px;
+  margin-top: 10px;
+  padding: 20px;
+  color: #000;
+}
+
+/* PROJECTS */
+.projects-content {
+
+}
+
+
+
+
