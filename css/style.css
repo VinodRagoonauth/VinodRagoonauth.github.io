@@ -67,9 +67,11 @@ nav li {
 
 .desc-text {
   border-style: solid;
-  background-color: var(--navbar-bg-color); 
+  background-color: var(--navbar-bg-color);
+  -moz-background-color: var(--navbar-bg-color); 
   border-color: var(--navbar-bg-color);
   border-radius: 20px;
+  -moz-border-radius: 20px;
   margin-top: 10px;
   padding: 20px;
   color: #000;
