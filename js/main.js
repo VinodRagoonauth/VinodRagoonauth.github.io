@@ -1,5 +1,5 @@
-function myFunction() {
-  var x = document.getElementById("myLinks");
+function showMobileNavMenu() {
+  var x = document.getElementById("navLinks");
   if (x.style.display === "block") {
     x.style.display = "none";
   } else {

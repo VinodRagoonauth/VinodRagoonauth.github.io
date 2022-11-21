@@ -68,7 +68,7 @@ nav li {
   position: relative;
 }
 
-.topnav #myLinks {
+.topnav #navLinks {
   display: none;
 }
 
@@ -101,6 +101,13 @@ nav li {
 .home-content h3 {
   color: var(--grey-text-color);
   text-align: center;
+}
+
+.fa-address-card  {
+  color: var(--navbar-text-color);
+  font-size: 22.2rem;
+  text-align: center;
+  display: inline-block;
 }
 
 .desc-text {
