@@ -1,3 +1,4 @@
+/* GENERAL */
 :root {
   --navbar-bg-color: #d9eee1;
   --navbar-text-color: #5e7062;
@@ -7,7 +8,7 @@
 html {
   overflow-y: hidden;
 }
-/* GENERAL */
+
 body {
   font-family: "Source Sans Pro";
   margin: 0;
@@ -58,6 +59,35 @@ nav li {
   padding-bottom: 20px;
 }
 
+/* MOBILE NAV BAR */
+.topnav {
+  opacity: 0;
+  pointer-events: none;
+  overflow: hidden;
+  background-color: var(--navbar-bg-color);
+  position: relative;
+}
+
+.topnav #myLinks {
+  display: none;
+}
+
+.topnav a {
+  float: left;
+  color: var(--navbar-text-color);
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a.icon {
+  float: right;
+}
+
+.topnav a:hover {
+  color: black;
+}
+
 /* HOME */
 .home-content {
   width: 400px;
@@ -100,6 +130,12 @@ nav li {
   .main {
     transition: 0.5s ease-in;
     left: 50%;
+  }
+
+  .topnav {
+    pointer-events: all;
+    opacity: 1;
+    transition: visibility 0s, opacity 0.5s linear;
   }
 }
 
