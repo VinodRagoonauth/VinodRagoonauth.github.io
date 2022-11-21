@@ -90,7 +90,7 @@ nav li {
 
 /* HOME */
 .home-content {
-  width: 400px;
+  width: 500px;
 }
 
 .home-content h1 {
@@ -103,7 +103,13 @@ nav li {
   text-align: center;
 }
 
-.fa-address-card  {
+.pfp-container {
+position: relative;
+  -webkit-transform: translate(10%);
+  transform: translate(10%);
+}
+
+.fa-address-card {
   color: var(--navbar-text-color);
   font-size: 22.2rem;
   text-align: center;
