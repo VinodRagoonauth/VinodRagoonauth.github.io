@@ -110,7 +110,7 @@ position: relative;
 }
 
 .fa-address-card {
-  color: var(--navbar-text-color);
+  color: var(--navbar-bg-color);
   font-size: 22.2rem;
   text-align: center;
   display: inline-block;
