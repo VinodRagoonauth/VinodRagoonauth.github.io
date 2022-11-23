@@ -129,10 +129,11 @@ position: relative;
 }
 
 /* PROJECTS */
-.projects-content {  display: grid;
+.projects-content {  
+  display: grid;
   grid-template-columns: 1.2fr 1.2fr;
   grid-template-rows: 1.3fr 1.6fr;
-  gap: 0px 0px;
+  gap: 0px 30px;
   grid-auto-flow: row;
   grid-template-areas:
     "title title"
@@ -141,17 +142,66 @@ position: relative;
 
 .title { 
   grid-area: title; 
-  background-color: var(--navbar-bg-color);
-  border-style: solid;
-  border-color: var(--navbar-bg-color);
-  border-radius: 20px;
+  /* background-color: var(--navbar-bg-color); */
+  /* border-style: solid; */
+  /* border-color: var(--navbar-bg-color); */
+  /* border-radius: 20px; */
   text-align: center;
   font-size: 30px;
-  padding: 10px; 
+  padding: 10px;
+  height: 40px;
+  font-size: 60px;
+  /* width: 250px; */
+  /* position: relative; */
+  /* top: 50%; */
+  /* left: 25%; */
 }
 
-.ifixit-container { grid-area: ifixit-container; }
-.report-container { grid-area: report-container; }
+.ifixit-container { 
+  grid-area: ifixit-container;
+  text-align: center;
+  padding: 10px;
+  border-style: solid;
+  border-color: var(--navbar-text-color);
+  border-radius: 20px;
+  margin: 20px 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  width: 250px;
+}
+
+.ifixit-container p {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.ifixit-container:hover {
+  background-color: var(--navbar-text-color);
+  color: white;
+}
+
+.report-container { 
+  grid-area: report-container;
+  text-align: center;
+  padding: 10px;
+  border-style: solid;
+  border-color: var(--navbar-text-color);
+  border-radius: 20px;
+  margin: 20px 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  width: 250px;
+}
+
+.report-container p {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.report-container:hover {
+  background-color: var(--navbar-text-color);
+  color: white;
+}
 
 /* MEDIA QUERIES */
 @media only screen and (max-width: 900px) {
