@@ -230,7 +230,7 @@ text-align: center;
 }
 
 /* MEDIA QUERIES */
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1000px) {
   nav {
     opacity: 0;
     transition: visibility 0s, opacity 0.5s linear;
@@ -266,7 +266,7 @@ text-align: center;
   }
 }
 
-@media only screen and (min-width: 901px) {
+@media only screen and (min-width: 1001px) {
   nav {
     opacity: 1;
     transition: visibility 0s, opacity 0.5s linear;
