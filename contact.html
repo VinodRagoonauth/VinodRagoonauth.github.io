@@ -6,7 +6,7 @@
 <link href="css/style.css?t=[timestamp]" rel="stylesheet" />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 <script src="js/main.js"></script>
 
 <body>
@@ -45,11 +45,32 @@
 
   <!-- CONTACT PAGE -->
   <div class="main">
-    <div class="contact-content">
+    <div class="contact-contentd">
+      
       <!-- DESCRIPTION -->
-      <h3>Contact/more info about me</h3>
-      <p>- contact information <br></p>
+      <h1 class="animate__animated animate__slideInDown">Contact me</h1>
+
+      <!-- CONTACT FORM -->
+      <div class="contact-form-container animate__animated animate__fadeIn animate__slow">
+        <form action="">
+          <label for="fname">First Name</label>
+          <input type="text" name="firstname" id="fname" placeholder="Enter your first name" required>
+          <label for="lname">Last Name</label>
+          <input type="text" name="lastname" id="lname" placeholder="Enter your last name" required>
+          
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Enter your email" required>
+          
+          <label for="msg">Message</label>
+          <textarea name="message" id="msg" cols="61" rows="1" placeholder="Write your message" required></textarea>
+
+          <input type="submit" value="Submit">
+        </form>
+      </div>
     </div>
+
+    <!-- EMAIL -->
+    <p class="email-text animate__animated animate__slideInUp"><i class="fa-regular fa-envelope"></i> &nbsp; Vinod_rag@outlook.com</p>
   </div>
 </body>
 

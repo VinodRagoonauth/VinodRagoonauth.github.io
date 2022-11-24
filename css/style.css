@@ -3,6 +3,9 @@
   --navbar-bg-color: #d9eee1;
   --navbar-text-color: #5e7062;
   --grey-text-color: rgb(82, 82, 82);
+  --light-grey: rgb(241, 241, 241);
+  --other-green: rgb(93, 155, 0);
+  --navbar-bg-color-selected: #b4d6c1;
 }
 
 html {
@@ -21,10 +24,6 @@ a {
 
 a:hover {
   color: black;
-}
-
-a:active {
-  color: grey;
 }
 
 .main {
@@ -139,7 +138,7 @@ text-align: center;
 
 .projects-bttn {
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 500;
   background-color: var(--navbar-text-color);
   color: white;
   border-radius: 10px;
@@ -229,6 +228,52 @@ text-align: center;
   color: white;
 }
 
+/* CONTACT PAGE */
+.contact-form-container{
+  background-color: var(--light-grey);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+input[type=submit] {
+  background-color: var(--navbar-bg-color);
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  border: none;
+}
+
+input[type=submit]:hover {
+  background-color: var(--navbar-bg-color-selected);
+}
+
+input:focus, textarea:focus {
+  outline: none !important;
+  border-color: var(--navbar-text-color);
+  border: 2px solid var(--other-green); 
+}
+
+.contact-content h1 {
+  color: var(--grey-text-color);
+}
+
+.email-text {
+  color: var(--grey-text-color);
+}
+
 /* MEDIA QUERIES */
 @media only screen and (max-width: 1000px) {
   nav {
@@ -240,6 +285,7 @@ text-align: center;
   .main {
     transition: 0.5s ease-in;
     left: 50%;
+    width: 400px;
   }
 
   .topnav {
