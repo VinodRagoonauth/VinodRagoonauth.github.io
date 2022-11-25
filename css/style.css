@@ -124,7 +124,7 @@ position: relative;
   -moz-border-radius: 20px;
   margin-top: 10px;
   padding-bottom: 20px;
-  /* text-align: center; */
+  text-align: center;
 }
 
 .desc-text {
@@ -149,8 +149,9 @@ text-align: center;
 }
 
 .projects-bttn:hover {
-  background-color: var(--navbar-bg-color);
+  background-color: var(--navbar-bg-color-selected);
   color: var(--navbar-text-color);
+  border-color: var(--navbar-bg-color-selected);
 }
 
 /* PROJECTS */
@@ -167,19 +168,14 @@ text-align: center;
 
 .title { 
   grid-area: title; 
-  /* background-color: var(--navbar-bg-color); */
-  /* border-style: solid; */
-  /* border-color: var(--navbar-bg-color); */
-  /* border-radius: 20px; */
   text-align: center;
-  font-size: 30px;
+  font-size: 20px;
   padding: 10px;
   height: 40px;
+}
+
+.title h1 {
   font-size: 60px;
-  /* width: 250px; */
-  /* position: relative; */
-  /* top: 50%; */
-  /* left: 25%; */
 }
 
 .ifixit-container { 
@@ -189,7 +185,7 @@ text-align: center;
   border-style: solid;
   border-color: var(--navbar-text-color);
   border-radius: 20px;
-  margin: 20px 10px;
+  margin: 40px 10px;
   font-size: 1.5rem;
   font-weight: bold;
   width: 250px;
@@ -212,7 +208,7 @@ text-align: center;
   border-style: solid;
   border-color: var(--navbar-text-color);
   border-radius: 20px;
-  margin: 20px 10px;
+  margin: 40px 10px;
   font-size: 1.5rem;
   font-weight: bold;
   width: 250px;
