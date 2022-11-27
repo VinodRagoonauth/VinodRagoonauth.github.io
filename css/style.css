@@ -1,4 +1,5 @@
 /* GENERAL */
+@import url("https://fonts.googleapis.com/css?family=Inter");
 :root {
   --navbar-bg-color: #d9eee1;
   --navbar-text-color: #5e7062;
@@ -17,6 +18,17 @@ html {
 body {
   font-family: "Inter";
   margin: 0;
+}
+
+@-moz-document url-prefix() {
+  h1 {
+    -webkit-text-stroke: 0.55px; 
+    letter-spacing: -1.5px;
+  }
+  h3 {
+    -webkit-text-stroke: 0.45px; 
+    letter-spacing: -1.1px;
+  }
 }
 
 a {
@@ -91,7 +103,7 @@ nav li {
 
 /* HOME */
 .home-content {
-  width: 500px;
+  width: 600px;
 }
 
 .home-content h1 {
@@ -99,15 +111,15 @@ nav li {
   color: var(--navbar-text-color);
 }
 
-.home-content h3 {
+.home-content h2 {
   color: var(--grey-text-color);
   text-align: center;
 }
 
 .pfp-container {
-position: relative;
-  -webkit-transform: translate(10%);
-  transform: translate(10%);
+  position: relative;
+  -webkit-transform: translate(16%);
+  transform: translate(16%);
 }
 
 .fa-address-card {
@@ -124,13 +136,14 @@ position: relative;
   border-color: var(--navbar-bg-color);
   border-radius: 20px;
   -moz-border-radius: 20px;
-  margin-top: 10px;
+  margin-top: 30px;
   padding-bottom: 20px;
   text-align: center;
 }
 
 .desc-text {
   padding: 10px 20px;
+  font-size: 19px;
   color: var(--grey-text-color);
 }
 
@@ -178,7 +191,7 @@ text-align: center;
 
 .title h1 {
   font-size: 60px;
-  color: var(--navbar-text-color);
+  color: var(--grey-text-color);
 }
 
 .title p {
@@ -300,8 +313,8 @@ input:focus, textarea:focus {
   }
 
   .pfp-container {
-    -webkit-transform: translate(15%);
-    transform: translate(15%);
+    -webkit-transform: translate(16%);
+    transform: translate(16%);
   }
 
   .fa-address-card {
