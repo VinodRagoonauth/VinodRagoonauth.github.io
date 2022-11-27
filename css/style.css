@@ -6,10 +6,12 @@
   --light-grey: rgb(241, 241, 241);
   --other-green: rgb(93, 155, 0);
   --navbar-bg-color-selected: #b4d6c1;
+  --background: #white;
 }
 
 html {
   overflow-y: hidden;
+  background-color: var(--background);
 }
 
 body {
@@ -176,11 +178,17 @@ text-align: center;
 
 .title h1 {
   font-size: 60px;
+  color: var(--navbar-text-color);
+}
+
+.title p {
+  color: var(--grey-text-color);
 }
 
 .ifixit-container { 
   grid-area: ifixit-container;
   text-align: center;
+  color: var(--grey-text-color);
   padding: 10px;
   background-color: var(--light-grey);
   border-color: var(--navbar-text-color);
@@ -204,6 +212,7 @@ text-align: center;
 .report-container { 
   grid-area: report-container;
   text-align: center;
+  color: var(--grey-text-color);
   padding: 10px;
   background-color: var(--light-grey);
   border-color: var(--navbar-text-color);
@@ -262,7 +271,7 @@ input:focus, textarea:focus {
   border: 2px solid var(--other-green); 
 }
 
-.contact-content h1 {
+.contact {
   color: var(--grey-text-color);
 }
 
