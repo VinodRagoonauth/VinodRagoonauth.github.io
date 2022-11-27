@@ -1,5 +1,6 @@
-/* GENERAL */
 @import url("https://fonts.googleapis.com/css?family=Inter");
+
+/* GENERAL */
 :root {
   --navbar-bg-color: #d9eee1;
   --navbar-text-color: #5e7062;
@@ -12,6 +13,7 @@
 
 html {
   overflow-y: hidden;
+  overflow-x: hidden;
   background-color: var(--background);
 }
 
@@ -20,14 +22,21 @@ body {
   margin: 0;
 }
 
+/* FIREFOX CSS */
 @-moz-document url-prefix() {
   h1 {
     -webkit-text-stroke: 0.55px; 
     letter-spacing: -1.5px;
   }
+
   h3 {
     -webkit-text-stroke: 0.45px; 
     letter-spacing: -1.1px;
+  }
+
+  h2 {
+    -webkit-text-stroke: 0.45px; 
+    letter-spacing: -1px;
   }
 }
 
@@ -244,6 +253,99 @@ text-align: center;
 .report-container:hover {
   background-color: var(--navbar-text-color);
   color: white;
+}
+
+/* PROJECT PAGE */
+.Project-Container {  
+  display: grid;
+  width: 1200px;
+  height: 850px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.4fr 0.6fr 2fr;
+  gap: 1px 20px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Project-Title Project-Title Project-Link"
+    "Project-Synopsis Project-Synopsis Project-Skills"
+    "Project-Description Project-Description Project-Skills";
+  }
+
+.Project-Container h2 {
+  font-size: 40px;
+}
+
+.Project-Title { 
+  grid-area: Project-Title; 
+  color: var(--grey-text-color);
+  font-size: 30px;
+}
+
+.Project-Link { 
+  grid-area: Project-Link;
+  margin-top: 70px;
+  padding-left: 10px;
+}
+
+.Project-bttn {
+  font-size: 18px;
+  font-weight: 500;
+  background-color: var(--navbar-bg-color);
+  color: var(--navbar-text-color);
+  border-radius: 10px;
+  border-style: solid;
+  border-color: var(--navbar-bg-color);
+  border-width: 3px;
+  padding: 5px;
+  margin-right: 10px;
+}
+
+.Project-bttn:hover {
+  background-color: var(--navbar-bg-color-selected);
+  border-color: var(--navbar-bg-color-selected);
+}
+
+.Project-bttn-2 {
+  font-size: 18px;
+  font-weight: 500;
+  background-color: white;
+  color: var(--navbar-text-color);
+  border-color: var(--navbar-text-color);
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 3px;
+  padding: 5px;
+  margin-right: 20px;
+}
+
+.Project-bttn-2:hover {
+  background-color: var(--navbar-bg-color-selected);
+  border-color: var(--navbar-bg-color-selected);
+  border-style: solid;
+}
+
+.Project-Synopsis { 
+  grid-area: Project-Synopsis;
+  color: var(--grey-text-color);
+  font-size: larger;
+  padding-right: 20px;
+}
+
+.Project-Description { 
+  grid-area: Project-Description; 
+  color: var(--grey-text-color);
+  font-size: larger;
+  padding-right: 20px;
+}
+
+.Project-Skills { 
+  margin-left: 10px;
+  grid-area: Project-Skills;
+  color: var(--grey-text-color);
+  font-size: larger;
+  background-color: var(--light-grey);
+  border-radius: 20px;
+  padding: 0px 20px 0px;
+  /* height: 710px;  */
 }
 
 /* CONTACT PAGE */
