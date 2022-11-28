@@ -1,17 +1,43 @@
+@import url("https://fonts.googleapis.com/css?family=Inter");
+
 /* GENERAL */
 :root {
   --navbar-bg-color: #d9eee1;
   --navbar-text-color: #5e7062;
   --grey-text-color: rgb(82, 82, 82);
+  --light-grey: rgb(241, 241, 241);
+  --other-green: rgb(93, 155, 0);
+  --navbar-bg-color-selected: #b4d6c1;
+  --background: #white;
 }
 
 html {
   overflow-y: hidden;
+  overflow-x: hidden;
+  background-color: var(--background);
 }
 
 body {
-  font-family: "Source Sans Pro";
+  font-family: "Inter";
   margin: 0;
+}
+
+/* FIREFOX CSS */
+@-moz-document url-prefix() {
+  h1 {
+    -webkit-text-stroke: 0.55px; 
+    letter-spacing: -1.5px;
+  }
+
+  h3 {
+    -webkit-text-stroke: 0.45px; 
+    letter-spacing: -1.1px;
+  }
+
+  h2 {
+    -webkit-text-stroke: 0.45px; 
+    letter-spacing: -1px;
+  }
 }
 
 a {
@@ -21,10 +47,6 @@ a {
 
 a:hover {
   color: black;
-}
-
-a:active {
-  color: grey;
 }
 
 .main {
@@ -90,7 +112,7 @@ nav li {
 
 /* HOME */
 .home-content {
-  width: 500px;
+  width: 600px;
 }
 
 .home-content h1 {
@@ -98,15 +120,15 @@ nav li {
   color: var(--navbar-text-color);
 }
 
-.home-content h3 {
+.home-content h2 {
   color: var(--grey-text-color);
   text-align: center;
 }
 
 .pfp-container {
-position: relative;
-  -webkit-transform: translate(10%);
-  transform: translate(10%);
+  position: relative;
+  -webkit-transform: translate(16%);
+  transform: translate(16%);
 }
 
 .fa-address-card {
@@ -116,23 +138,245 @@ position: relative;
   display: inline-block;
 }
 
-.desc-text {
+.text-container {
   border-style: solid;
   background-color: var(--navbar-bg-color);
   -moz-background-color: var(--navbar-bg-color);
   border-color: var(--navbar-bg-color);
   border-radius: 20px;
   -moz-border-radius: 20px;
-  margin-top: 10px;
-  padding: 20px;
+  margin-top: 30px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.desc-text {
+  padding: 10px 20px;
+  font-size: 19px;
   color: var(--grey-text-color);
 }
 
-/* PROJECTS */
+.projects-bttn-container {
+text-align: center;
+}
 
+.projects-bttn {
+  font-size: 18px;
+  font-weight: 500;
+  background-color: var(--navbar-text-color);
+  color: white;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: var(--navbar-text-color);
+  border-width: 3px;
+  padding: 5px;
+}
+
+.projects-bttn:hover {
+  background-color: var(--navbar-bg-color-selected);
+  color: var(--navbar-text-color);
+  border-color: var(--navbar-bg-color-selected);
+}
+
+/* PROJECTS */
+.projects-content {  
+  display: grid;
+  grid-template-columns: 1.2fr 1.2fr;
+  grid-template-rows: 1.3fr 1.6fr;
+  gap: 0px 30px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "title title"
+    "ifixit-container report-container";
+}
+
+.title { 
+  grid-area: title; 
+  text-align: center;
+  font-size: 20px;
+  padding: 10px;
+  height: 40px;
+}
+
+.title h1 {
+  font-size: 60px;
+  color: var(--grey-text-color);
+}
+
+.title p {
+  color: var(--grey-text-color);
+}
+
+.ifixit-container { 
+  grid-area: ifixit-container;
+  text-align: center;
+  color: var(--grey-text-color);
+  padding: 10px;
+  background-color: var(--light-grey);
+  border-color: var(--navbar-text-color);
+  border-radius: 20px;
+  margin: 40px 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  width: 250px;
+}
+
+.ifixit-container p {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.ifixit-container:hover {
+  background-color: var(--navbar-text-color);
+  color: white;
+}
+
+.report-container { 
+  grid-area: report-container;
+  text-align: center;
+  color: var(--grey-text-color);
+  padding: 10px;
+  background-color: var(--light-grey);
+  border-color: var(--navbar-text-color);
+  border-radius: 20px;
+  margin: 40px 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  width: 250px;
+}
+
+.report-container p {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.report-container:hover {
+  background-color: var(--navbar-text-color);
+  color: white;
+}
+
+/* PROJECT PAGE */
+.Project-Container {  
+  display: grid;
+  width: 1200px;
+  height: 850px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.4fr 0.6fr 2fr;
+  gap: 1px 20px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Project-Title Project-Title Project-Link"
+    "Project-Synopsis Project-Synopsis Project-Skills"
+    "Project-Description Project-Description Project-Skills";
+  }
+
+.Project-Container h2 {
+  font-size: 40px;
+}
+
+.Project-Title { 
+  grid-area: Project-Title; 
+  color: var(--navbar-text-color);
+  font-size: 30px;
+}
+
+.Project-Link { 
+  grid-area: Project-Link;
+  margin-top: 70px;
+  padding-left: 10px;
+}
+
+.Project-bttn {
+  font-size: 18px;
+  font-weight: 500;
+  background-color: var(--navbar-bg-color);
+  color: var(--navbar-text-color);
+  border-radius: 10px;
+  border-style: solid;
+  border-color: var(--navbar-bg-color);
+  border-width: 3px;
+  padding: 5px;
+  margin-right: 8px;
+}
+
+.Project-bttn:hover {
+  background-color: var(--navbar-bg-color-selected);
+  border-color: var(--navbar-bg-color-selected);
+}
+
+.Project-Synopsis { 
+  grid-area: Project-Synopsis;
+  color: var(--grey-text-color);
+  font-size: larger;
+  padding-right: 20px;
+}
+
+.Project-Description { 
+  grid-area: Project-Description; 
+  color: var(--grey-text-color);
+  font-size: larger;
+  padding-right: 20px;
+}
+
+.Project-Skills { 
+  margin-left: 10px;
+  grid-area: Project-Skills;
+  color: var(--grey-text-color);
+  font-size: larger;
+  background-color: var(--light-grey);
+  border-radius: 20px;
+  padding: 0px 20px 0px;
+  /* height: 710px;  */
+}
+
+/* CONTACT PAGE */
+.contact-form-container{
+  background-color: var(--light-grey);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+input[type=submit] {
+  background-color: var(--navbar-bg-color);
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  border: none;
+}
+
+input[type=submit]:hover {
+  background-color: var(--navbar-bg-color-selected);
+}
+
+input:focus, textarea:focus {
+  outline: none !important;
+  border-color: var(--navbar-text-color);
+  border: 2px solid var(--other-green); 
+}
+
+.contact {
+  color: var(--grey-text-color);
+}
+
+.email-text {
+  color: var(--grey-text-color);
+}
 
 /* MEDIA QUERIES */
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1000px) {
   nav {
     opacity: 0;
     transition: visibility 0s, opacity 0.5s linear;
@@ -142,6 +386,7 @@ position: relative;
   .main {
     transition: 0.5s ease-in;
     left: 50%;
+    width: 400px;
   }
 
   .topnav {
@@ -150,22 +395,25 @@ position: relative;
     transition: visibility 0s, opacity 0.5s linear;
   }
 
-.pfp-container {
-  -webkit-transform: translate(15%);
-  transform: translate(15%);
-}
-.fa-address-card {
-  font-size: 15rem;
-}
-.home-content {
+  .pfp-container {
+    -webkit-transform: translate(16%);
+    transform: translate(16%);
+  }
+
+  .fa-address-card {
+    font-size: 15rem;
+  }
+
+  .home-content {
   width: 400px;
-}
+  }
+  
   .desc-text {
     margin: 10px;
   }
 }
 
-@media only screen and (min-width: 901px) {
+@media only screen and (min-width: 1001px) {
   nav {
     opacity: 1;
     transition: visibility 0s, opacity 0.5s linear;
