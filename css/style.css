@@ -276,7 +276,7 @@ text-align: center;
 
 .Project-Title { 
   grid-area: Project-Title; 
-  color: var(--grey-text-color);
+  color: var(--navbar-text-color);
   font-size: 30px;
 }
 
@@ -296,31 +296,12 @@ text-align: center;
   border-color: var(--navbar-bg-color);
   border-width: 3px;
   padding: 5px;
-  margin-right: 10px;
+  margin-right: 8px;
 }
 
 .Project-bttn:hover {
   background-color: var(--navbar-bg-color-selected);
   border-color: var(--navbar-bg-color-selected);
-}
-
-.Project-bttn-2 {
-  font-size: 18px;
-  font-weight: 500;
-  background-color: white;
-  color: var(--navbar-text-color);
-  border-color: var(--navbar-text-color);
-  border-radius: 10px;
-  border-style: solid;
-  border-width: 3px;
-  padding: 5px;
-  margin-right: 20px;
-}
-
-.Project-bttn-2:hover {
-  background-color: var(--navbar-bg-color-selected);
-  border-color: var(--navbar-bg-color-selected);
-  border-style: solid;
 }
 
 .Project-Synopsis { 
