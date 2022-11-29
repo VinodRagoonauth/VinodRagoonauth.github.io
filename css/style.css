@@ -259,7 +259,7 @@ text-align: center;
 .Project-Container {  
   display: grid;
   width: 1200px;
-  height: 850px;
+  height: 835px;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 0.4fr 0.6fr 2fr;
   gap: 1px 20px;
