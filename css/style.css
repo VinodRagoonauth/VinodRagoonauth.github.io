@@ -399,7 +399,7 @@ input:focus, textarea:focus {
   color: var(--grey-text-color);
   font-size: larger;
   background-color: var(--light-grey);
-  padding: 20px;
+  padding: 30px;
   border-radius: 10px;
 }
 
