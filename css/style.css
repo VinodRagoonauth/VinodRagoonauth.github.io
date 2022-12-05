@@ -375,6 +375,46 @@ input:focus, textarea:focus {
   color: var(--grey-text-color);
 }
 
+.skills-content {
+  display: grid; 
+  grid-auto-columns: 1fr; 
+  grid-template-columns: 1fr 1fr 1fr; 
+  grid-template-rows: 1fr; 
+  gap: 20px 60px; 
+  grid-template-areas: 
+    "Empty Empty Empty"
+    "Content-1 Content-2 Content-3"; 
+  width: 1400px;
+}
+
+.skills-content h2 {
+  text-align: center;
+  font-size: 40px;
+  background-color: var(--navbar-bg-color);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.skills-content p {
+  color: var(--grey-text-color);
+  font-size: larger;
+  background-color: var(--light-grey);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.Empty {
+  grid-area: Empty;
+  height: 10px;
+  padding-bottom: 60px;
+}
+
+.Content-1 { grid-area: Content-1; }
+
+.Content-2 { grid-area: Content-2; }
+
+.Content-3 { grid-area: Content-3; }
+
 /* MEDIA QUERIES */
 @media only screen and (max-width: 1000px) {
   nav {
